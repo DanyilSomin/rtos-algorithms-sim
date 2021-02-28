@@ -15,8 +15,6 @@ bool StrategySimple::add(std::chrono::milliseconds timeAlive)
 		{
 			std::function<void(int)> callUpdate = [this](int id) { };
 			mProcesses[i] = { i, timeAlive, callUpdate };
-
-			mProcesses[i] = p;
 			
 			return true;
 		}
