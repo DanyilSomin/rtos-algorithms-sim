@@ -8,10 +8,7 @@ StrategyLoop::StrategyLoop(std::vector<Process>& processes)
 
 bool StrategyLoop::add(std::chrono::milliseconds timeAlive)
 {
-	auto callUpdate = [this](int id)
-	{
-		finishCallback(id);
-	};
+	auto callUpdate = [this](int id) { finishCallback(id); };
 
 	int i = (mLastAvaible < 0) ? 0 : mLastAvaible;
 	int j = 0;
