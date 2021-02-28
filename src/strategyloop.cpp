@@ -22,8 +22,8 @@ bool StrategyLoop::add(std::chrono::milliseconds timeAlive)
 		++mComparations;
 		if (!mProcesses[i].isAlive())
 		{
-			const Process p{ i, timeAlive, std::function<void(int)>{ callUpdate } };
-			mProcesses[i] = p;
+			const td::function<void(int)> f{ callUpdate };
+			mProcesses[i] = { i, timeAlive, f };
 			
 			mLastAvaible = i + 1;
 			
