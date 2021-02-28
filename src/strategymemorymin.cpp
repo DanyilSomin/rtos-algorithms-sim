@@ -33,11 +33,11 @@ void StrategyMemoryMin::drawInLine() const
 	{
 		if (p.isAlive())
 		{
-			std::cout << char(178);
+			std::cout << '|';
 		}
 		else
 		{
-			std::cout << char(176);
+			std::cout << '-';
 		}
 	}
 	std::cout << ']'
