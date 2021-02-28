@@ -15,7 +15,8 @@ bool StrategyMemoryMin::add(std::chrono::milliseconds timeAlive)
 		++mComparations;
 		if (!mProcesses[i].isAlive())
 		{
-			mProcesses[i] = { i, timeAlive, std::function<void(int)>{ callUpdate } };
+			std::function<void(int)> f{ callUpdate };
+			mProcesses[i] = { i, timeAlive, f };
 			
 			mMinAvaibleIndex = i;
 			
