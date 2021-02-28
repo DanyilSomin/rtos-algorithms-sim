@@ -40,14 +40,14 @@ int main()
 	std::vector<Process> processesLoop{ processAmount };
 	std::vector<Process> processesStack{ processAmount };
 
-	// initialize vectors with strategies for each algorythm
+	// initialize vector with strategies for each algorythm
 	StrategyVector strategies;
 	strategies.emplace_back(new StrategySimple{ processesSimple });
 	strategies.emplace_back(new StrategyMemoryMin{ processesFirst });
 	strategies.emplace_back(new StrategyLoop{ processesLoop });
 	strategies.emplace_back(new StrategyStack{ processesStack });
 
-	// force addition of a first process
+	// force to add the first process
 	auto timeToAdd = Clock::now();
 
 	// game loop
@@ -92,7 +92,7 @@ void draw(const StrategyVector& strategies)
 #else
 	for (int i = 0; i < strategies.size(); ++i)
 	{
-		std::cout << "\x1b[A"; // line up
+		std::cout << "\x1b[A"; // line up in console
 	}
 #endif
 
