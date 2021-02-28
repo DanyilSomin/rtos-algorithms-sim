@@ -30,7 +30,7 @@ public:
 	void drawInLine() const override;
 
 private:
-	void finishCallback(int id) override;
+	void finishCallback(int id);
 
 	std::vector<Process>& mProcesses;
 
