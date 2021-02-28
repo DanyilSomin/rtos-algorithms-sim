@@ -1,5 +1,5 @@
 # rtos-algorithms-sim
-Sandbox for testing different algorithms for finding free place on the array. Project contains several algorithms for finding free process place in the array of processes (see strategy*.h files) and settings (settings.h) where user can easy change all sandbox configuration such as vectors length, time process alive, creation period.
+Project contains several algorithms for finding free process place in the array of processes (see strategy*.h files) and settings (settings.h) where user can easy change all sandbox configuration such as vectors length, time process alive, creation period.
 
 # Build
 Use cmake .<br>
