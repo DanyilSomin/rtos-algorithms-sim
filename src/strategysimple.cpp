@@ -13,7 +13,8 @@ bool StrategySimple::add(std::chrono::milliseconds timeAlive)
 		++mComparations;
 		if (!mProcesses[i].isAlive())
 		{
-			Process p{ i, timeAlive, std::function<void(int)>{ [](int) {} } };
+			std::function<void(int)> callUpdate = [this](int id) { };
+			mProcesses[i] = { i, timeAlive, callUpdate };
 
 			mProcesses[i] = p;
 			
