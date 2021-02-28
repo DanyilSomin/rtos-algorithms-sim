@@ -8,15 +8,14 @@ StrategyMemoryMin::StrategyMemoryMin(std::vector<Process>& processes)
 
 bool StrategyMemoryMin::add(std::chrono::milliseconds timeAlive)
 {
-	auto callUpdate = [this](int id) { finishCallback(id); };
+	std::function<void(int)> callUpdate = [this](int id) { finishCallback(id); };
 
 	for (int i = (mMinAvaibleIndex < 0) ? 0 : mMinAvaibleIndex; i < mProcesses.size(); ++i)
 	{
 		++mComparations;
 		if (!mProcesses[i].isAlive())
 		{
-			std::function<void(int)> f{ callUpdate };
-			mProcesses[i] = { i, timeAlive, f };
+			mProcesses[i] = { i, timeAlive, callUpdate };
 			
 			mMinAvaibleIndex = i;
 			
