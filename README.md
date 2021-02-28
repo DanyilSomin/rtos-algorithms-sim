@@ -5,7 +5,7 @@ Sandbox for testing different algorithms for finding free place on the array. Pr
 Use cmake .<br>
 For example on unix like systems:<br>
 $ cmake .<br>
-$ make .<br><br>
+$ make<br><br>
 Or just call cmake . and open the .sln in case of Visual Studio.
 
 # Write own algorithm
