@@ -16,9 +16,9 @@
 	On update set index of last available process to new
 	only if it is smaller then current index.
 
-    O(1) memory
-    O(n) comparations
-    unstable
+	O(1) memory
+	O(n) comparations
+	unstable
 */
 class StrategyMemoryMin : public Strategy
 {

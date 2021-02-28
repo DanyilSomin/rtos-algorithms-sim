@@ -17,8 +17,8 @@
 	the distance to next available process.
 
 	O(1) memory
-    O(n) comparations
-    unstable
+	O(n) comparations
+	unstable
 */
 class StrategyLoop : public Strategy
 {
