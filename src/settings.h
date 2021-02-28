@@ -1,7 +1,7 @@
 #ifndef SETTINGS_H
 #define SETTINGS_H
 
-constexpr int updatePeriod = 3;      // ms
+constexpr int updatePeriod = 15;      // ms
 
 constexpr int processTimeAliveMin = 1;      // ms
 constexpr int processTimeAliveMax = 1400;   // ms
