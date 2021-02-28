@@ -18,10 +18,9 @@ bool StrategyStack::add(std::chrono::milliseconds timeAlive)
 {
 	if (mIds.size() == 0) return false;
 
-	std::function<void(int)> callUpdate = [this](int id) { finishCallback(id); };
-
 	const int id{ mIds.pop() };
 	
+	std::function<void(int)> callUpdate = [this](int id) { finishCallback(id); };
 	mProcesses[i] = { i, timeAlive, callUpdate };
 
 	return true;
