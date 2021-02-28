@@ -43,8 +43,3 @@ void StrategySimple::drawInLine() const
 		<< mComparations 
 		<< '\n';
 }
-
-void StrategySimple::finishCallback(int id)
-{
-
-}

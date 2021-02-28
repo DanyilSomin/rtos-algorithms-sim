@@ -12,9 +12,6 @@ public:
 	virtual void drawInLine() const = 0;
 
 	virtual ~Strategy() = default;
-
-private:
-	virtual void finishCallback(int) = 0;
 };
 
 #endif
