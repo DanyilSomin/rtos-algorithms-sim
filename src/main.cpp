@@ -89,17 +89,20 @@ void draw(const StrategyVector& strategies)
 {
 #ifdef WIN32
 	gotoStart();
-#else
-	for (int i = 0; i < strategies.size(); ++i)
-	{
-		std::cout << "\x1b[A"; // line up in console
-	}
 #endif
+
 
 	for (const auto& s : strategies)
 	{
 		s->drawInLine();
+	}	
+#ifndef WIN32
+	for (int i = 0; i < strategies.size(); ++i)
+	{
+		std::cout << "\x1b[A"; // line up in console
 	}
+	std::cout << "\r";
+#endif
 }
 
 void sleepMs(int sleepMs)
