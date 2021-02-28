@@ -9,4 +9,4 @@ $ make<br><br>
 Or just call cmake . and open the .sln in case of Visual Studio.
 
 # Write own algorithm
-To write own algorithm see other algorithm as example, inherit from Strategy interface (strategy.h) and add appropriate strategy in main().
+To write own algorithm see other algorithms as examples, inherit from Strategy interface (strategy.h) and add appropriate strategy in main().
