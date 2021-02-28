@@ -33,7 +33,7 @@ void StrategyStack::drawInLine() const
 	{
 		if (p.isAlive())
 		{
-			std::cout << '|';
+			std::cout << 'O';
 		}
 		else
 		{
